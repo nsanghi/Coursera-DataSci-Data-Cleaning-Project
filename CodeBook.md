@@ -35,18 +35,18 @@ The sensor signals (accelerometer and gyroscope) were pre-processed by applying 
 - `test/subject_train.txt`: Each row identifies the subject who performed the activity for each window sample. 
 
 ### Step 1 of Analysis - Merges the training and the test data set
-The data from original source is extracted in a directory named "dataset". The script is run from a folder which is sibling to the `dataset` folder.
+The data from original source is extracted in the working directory which contains the the script to be run .
 
 Following files are read from the original data:
 
-- `../dataset/features.txt`
-- `../dataset/activity_labels.txt`
-- `../dataset/train/X_train.txt`
-- `../dataset/train/y_train.txt`
-- `../dataset/train/subject_train.txt`
-- `../dataset/test/X_test.txt`
-- `../dataset/test/y_test.txt`
-- `../dataset/test/subject_test.txt`
+- `./UCI HAR Dataset/features.txt`
+- `./UCI HAR Dataset/activity_labels.txt`
+- `./UCI HAR Dataset/train/X_train.txt`
+- `./UCI HAR Dataset/train/y_train.txt`
+- `./UCI HAR Dataset/train/subject_train.txt`
+- `./UCI HAR Dataset/test/X_test.txt`
+- `./UCI HAR Dataset/test/y_test.txt`
+- `./UCI HAR Dataset/test/subject_test.txt`
 
 The column names are set properly and then data is merged to create a single dataset. This is stored in a variable named `all_data`
 

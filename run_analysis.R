@@ -25,22 +25,22 @@
 
 # read train and test sets
 # read features X_train and X_test
-features_train <- read.table("../dataset/train/X_train.txt", header = FALSE)
-features_test <- read.table("../dataset/test/X_test.txt", header = FALSE)
+features_train <- read.table("./UCI\ HAR\ Dataset/train/X_train.txt", header = FALSE)
+features_test <- read.table("./UCI\ HAR\ Dataset/test/X_test.txt", header = FALSE)
 
 # read labels y_train and y_test
-labels_train <- read.table("../dataset/train/y_train.txt", header = FALSE)
-labels_test <-  read.table("../dataset/test/y_test.txt", header = FALSE)
+labels_train <- read.table("./UCI\ HAR\ Dataset/train/y_train.txt", header = FALSE)
+labels_test <-  read.table("./UCI\ HAR\ Dataset/test/y_test.txt", header = FALSE)
 
 # read subject ids subject_train and subject_test
-subjects_train <- read.table("../dataset/train/subject_train.txt", header = FALSE)
-subjects_test <- read.table("../dataset/test/subject_test.txt", header = FALSE)
+subjects_train <- read.table("./UCI\ HAR\ Dataset/train/subject_train.txt", header = FALSE)
+subjects_test <- read.table("./UCI\ HAR\ Dataset/test/subject_test.txt", header = FALSE)
 
 
 # Step 4- name the variables appropriately
 
 # first load the names of the features
-feature_names <- read.table("../dataset/features.txt", header = FALSE)
+feature_names <- read.table("./UCI\ HAR\ Dataset/features.txt", header = FALSE)
 
 # set the names of features
 colnames(features_train) <- feature_names[,2] # set the name of the features
@@ -74,7 +74,7 @@ final_data <- all_data[ ,selected_cols]
 
 # Step 3 - Uses descriptive activity names to name the activities in the data set
 # read description activity name
-activity_labels <- read.table("../dataset/activity_labels.txt", header = FALSE)
+activity_labels <- read.table("./UCI\ HAR\ Dataset/activity_labels.txt", header = FALSE)
 colnames(activity_labels) <- c("activity_id", "activity_type")
 
 # merge final_data with activity_labels

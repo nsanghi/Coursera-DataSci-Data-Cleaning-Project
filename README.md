@@ -6,9 +6,7 @@ Repository for the submission to the Course for evaluation
 
 The purpose of this project is to demonstrate the way data is collected, worked with, and cleaned. The goal is to prepare tidy data that can be used for later analysis.
 
-The data from the link <https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip> is downloaded. It is then extracted and the name of extracted folder is renamed from `UCI HAR Dataset` to `dataset`.
-
-The `dataset` folder is at the same level as the folder which contains the repository. The repository folder contains, apart from two .md files, the main script named `run_analysis.R`
+The data from the link <https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip> is downloaded. It is then extracted directly in the working directory preserving the subfolder structure as it is.
 
 Next step is to set the source diretory of R to the directory that contains the above script. 
 
