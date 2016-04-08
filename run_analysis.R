@@ -80,6 +80,23 @@ colnames(activity_labels) <- c("activity_id", "activity_type")
 # merge final_data with activity_labels
 final_data <- merge(activity_labels, final_data, by="activity_id")
 
+
+# Step 4-Appropriately labels the data set with descriptive variable names. 
+column_names <- colnames(final_data)
+
+for (i in 1:length(column_names)) {
+  column_names[i] <- gsub("\\()","",column_names[i])
+  column_names[i] <- gsub("-std$","_StdDev",column_names[i])
+  column_names[i] <- gsub("-std-","_StdDev_",column_names[i])
+  column_names[i] <- gsub("-mean$","_Mean",column_names[i])
+  column_names[i] <- gsub("-mean-","_Mean_",column_names[i])
+  column_names[i] <- gsub("^t","time",column_names[i])
+  column_names[i] <- gsub("^f","freq",column_names[i])
+  column_names[i] <- gsub("Acc","Acceleration",column_names[i])
+}
+
+colnames(final_data) <- column_names
+
 # Step 5 From the data set in step 4, creates a second, independent tidy data 
 #set with the average of each variable for each activity and each subject.
 library(dplyr)
